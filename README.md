@@ -2,6 +2,8 @@
 
 Kompakte lokale PHP-Anwendung zur Erfassung und zum Ausdruck von Auslagen- und Kilometerabrechnungen für Mitarbeitende einer Praxis.
 
+<img src="auslagen1.png" alt="drawing" width="1000"/>
+
 ## Funktionen
 
 - Erfassung von **Belegen** und **Kilometerposten** in einem gemeinsamen Vorgang
@@ -21,6 +23,8 @@ Kompakte lokale PHP-Anwendung zur Erfassung und zum Ausdruck von Auslagen- und K
 - Druckansicht mit Unterschriftsfeldern
 - Formularinhalte bleiben bei Eingabefehlern erhalten
 
+
+
 ## Design / Aufbau
 
 - **Eine einzige PHP-Datei**: `auslagen.php`
@@ -29,6 +33,9 @@ Kompakte lokale PHP-Anwendung zur Erfassung und zum Ausdruck von Auslagen- und K
 - Keine externe QR-Code-Nutzung, keine Cloud-Abhängigkeit
 - Drucklayout für möglichst platzsparende Ausgabe auf **A4**
 - Footer: `auslagen.php v1.0 von Dr. Thomas Kienzle`
+
+
+<img src="auslagen2.png" alt="drawing" width="1000"/>
 
 ## Voraussetzungen
 
