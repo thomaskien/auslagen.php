@@ -42,7 +42,7 @@ Kompakte lokale PHP-Anwendung zur Erfassung und zum Ausdruck von Auslagen- und K
 
 ## Voraussetzungen
 
-- Ubuntu 24.04 LTS oder ähnlich
+- Ubuntu 24.04 LTS, Debian, Raspberry oder ähnlich, läuft auf jeden Linux
 - Apache2
 - PHP mit SQLite-Unterstützung
 - lokal installierter QR-Generator `qrencode`
@@ -51,6 +51,7 @@ Kompakte lokale PHP-Anwendung zur Erfassung und zum Ausdruck von Auslagen- und K
 
 Der folgende Pasteblock installiert alles Nötige lokal, aktiviert Apache **nicht dauerhaft beim Boot**, startet ihn aber **einmal für die aktuelle Sitzung**, bindet ihn nur an `127.0.0.1` und kopiert `auslagen.php` ins Webroot.
 
+**Lokaler Test:**
 ```bash
 sudo apt update && \
 sudo apt install -y apache2 php libapache2-mod-php php-sqlite3 sqlite3 qrencode && \
@@ -64,6 +65,19 @@ sudo systemctl restart apache2 && \
 echo && echo "Fertig. Aufruf: http://127.0.0.1/auslagen.php" && \
 echo "Apache startet beim nächsten Boot NICHT automatisch."
 ```
+
+**Wichtige Dependency:**
+```bash
+sudo apt update && \
+sudo apt install -y apache2 php libapache2-mod-php php-sqlite3 sqlite3 qrencode && \
+# wenn das verzeichnis so stimmt einkommentieren:
+#sudo install -m 664 -o www-data -g www-data ./auslagen.php /var/www/html/auslagen.php && \
+sudo apache2ctl configtest && \
+sudo systemctl restart apache2 && \
+echo && echo "Fertig. Aufruf: z.B. http://##server##/auslagen.php" && \
+```
+
+
 
 ## Bedienung
 
