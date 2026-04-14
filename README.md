@@ -37,6 +37,9 @@ Kompakte lokale PHP-Anwendung zur Erfassung und zum Ausdruck von Auslagen- und K
 
 <img src="auslagen2.png" alt="drawing" width="1000"/>
 
+
+<img src="auslagen3.png" alt="drawing" width="1000"/>
+
 ## Voraussetzungen
 
 - Ubuntu 24.04 LTS oder ähnlich
